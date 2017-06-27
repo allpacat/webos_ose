@@ -179,12 +179,12 @@ public:
 		LSHelpers::JsonParser replyJSON{reply.getPayload()};
 		EXPECT_TRUE(replyJSON.isValidJson());
 		bool returnValue = false, isSubscribed = false;
-		EXPECT_TRUE(replyJSON.get("returnValue", returnValue));
+		EXPECT_TRUE(replyJSON.get("returnValue", returnValue) != NULL);
 		EXPECT_TRUE(returnValue);
-		EXPECT_TRUE(replyJSON.get("subscribed", isSubscribed));
+		EXPECT_TRUE(replyJSON.get("subscribed", isSubscribed) != NULL);
 		EXPECT_TRUE(isSubscribed);
 		std::string serviceClass;
-		EXPECT_TRUE(replyJSON.get("class", serviceClass));
+		EXPECT_TRUE(replyJSON.get("class", serviceClass) != NULL);
 		EXPECT_EQ(std::string(TEST_CLASS_NAME), serviceClass);
 	}
 
@@ -202,7 +202,7 @@ public:
 		LSHelpers::JsonParser postJSON{reply.getPayload()};
 		EXPECT_TRUE(postJSON.isValidJson());
 		int32_t postId{0};
-		EXPECT_TRUE(postJSON.get("id", postId));
+		EXPECT_TRUE(postJSON.get("id", postId) != NULL);
 		return postId;
 	}
 
@@ -247,12 +247,12 @@ void clientThreadFunc()
 	LSHelpers::JsonParser replyJSON{reply.getPayload()};
 	EXPECT_TRUE(replyJSON.isValidJson());
 	bool returnValue = false, isSubscribed = false;
-	EXPECT_TRUE(replyJSON.get("returnValue", returnValue));
+	EXPECT_TRUE(replyJSON.get("returnValue", returnValue) != NULL);
 	EXPECT_TRUE(returnValue);
-	EXPECT_TRUE(replyJSON.get("subscribed", isSubscribed));
+	EXPECT_TRUE(replyJSON.get("subscribed", isSubscribed) != NULL);
 	EXPECT_TRUE(isSubscribed);
 	std::string serviceClass;
-	EXPECT_TRUE(replyJSON.get("class", serviceClass));
+	EXPECT_TRUE(replyJSON.get("class", serviceClass) != NULL);
 	EXPECT_EQ(std::string(TEST_CLASS_NAME), serviceClass);
 
 	reply = call.get(200);
@@ -260,7 +260,7 @@ void clientThreadFunc()
 	LSHelpers::JsonParser postJSON{reply.getPayload()};
 	EXPECT_TRUE(postJSON.isValidJson());
 	int32_t postId{0};
-	EXPECT_TRUE(postJSON.get("id", postId));
+	EXPECT_TRUE(postJSON.get("id", postId) != NULL);
 	EXPECT_LE(1, postId);
 	++g_counter;
 
