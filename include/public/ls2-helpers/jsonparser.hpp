@@ -16,6 +16,7 @@
 
 #pragma once
 
+#include <array>
 #include <exception>
 #include <functional>
 #include <string>
