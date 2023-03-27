@@ -35,7 +35,7 @@ if(WEBOS_USE_WERROR)
 endif()
 
 # Turn on all warnings
-webos_add_compiler_flags(ALL -std=c++11 -Wall -Wextra -fno-permissive)
+webos_add_compiler_flags(ALL -std=c++14 -Wall -Wextra)
 #disable specific warnings
 webos_add_compiler_flags(ALL -Wno-unused-parameter -Wno-type-limits, -Wno-missing-field-initializers)
 #promote specific warnings to errors
