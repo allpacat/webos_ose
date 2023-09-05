@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2018 LG Electronics, Inc.
+// Copyright (c) 2016-2025 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -449,6 +449,7 @@ public:
 			_fieldName(context._fieldName),
 			_destination(context._destination),
 			_valueRead(context._valueRead),
+			_valueNull(context._valueNull),
 			_optional(context._optional),
 			_allowNull(context._allowNull)
 	{
