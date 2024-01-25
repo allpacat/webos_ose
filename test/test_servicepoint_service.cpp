@@ -171,7 +171,7 @@ TEST(TestSubscriptionPointService, CallFail)
 		std::string em;
 		int ec;
 		ASSERT_TRUE(bool(p.get("returnValue", rv)));
-		ASSERT_TRUE(bool(p.get("errorMessage", em)));
+		ASSERT_TRUE(bool(p.get("errorText", em)));
 		ASSERT_TRUE(bool(p.get("errorCode", ec)));
 		ASSERT_TRUE(bool(p.finishParse(true)));
 		ASSERT_FALSE(rv);
@@ -191,7 +191,7 @@ TEST(TestSubscriptionPointService, CallFail)
 		std::string em;
 		int ec;
 		ASSERT_TRUE(bool(p.get("returnValue", rv)));
-		ASSERT_TRUE(bool(p.get("errorMessage", em)));
+		ASSERT_TRUE(bool(p.get("errorText", em)));
 		ASSERT_TRUE(bool(p.get("errorCode", ec)));
 		ASSERT_TRUE(bool(p.finishParse(true)));
 		ASSERT_FALSE(rv);

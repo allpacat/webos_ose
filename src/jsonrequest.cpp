@@ -162,7 +162,7 @@ ErrorResponse::ErrorResponse(int error_code, const char* format, ...)
 {
 	va_list args;
 	va_start(args, format);
-	this->put("errorMessage", string_format_valist(format, args));
+	this->put("errorText", string_format_valist(format, args));
 	va_end(args);
 }
 

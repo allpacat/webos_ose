@@ -37,7 +37,7 @@ class ErrorResponse: public pbnjson::JObject
 {
 public:
 	ErrorResponse(int error_code, const std::string& _message):
-			pbnjson::JObject{{"returnValue", false}, {"errorCode", error_code}, {"errorMessage", _message}}
+			pbnjson::JObject{{"returnValue", false}, {"errorCode", error_code}, {"errorText", _message}}
 	{};
 
 	ErrorResponse(const ErrorResponse& e): pbnjson::JObject(e)
