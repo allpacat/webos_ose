@@ -1,4 +1,4 @@
-// Copyright (c) 2016-2018 LG Electronics, Inc.
+// Copyright (c) 2016-2024 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -78,6 +78,10 @@ bool SubscriptionPoint::postSubscriptions(gpointer user_data)
 // subscriptions.
 bool SubscriptionPoint::post(const char *payload) noexcept
 {
+	if (!payload) {
+		LOG_LS_DEBUG("payload as NULL. [%s]\n", __func__);
+		return false;
+	}
 	if (!mServiceHandle)
 		return false;
 
