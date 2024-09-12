@@ -15,6 +15,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #include <cmath>
+#include <limits>
 #include "jsonparser.hpp"
 #include "util.hpp"
 
@@ -220,7 +221,7 @@ void JsonParser::parseValue<uint64_t>(const JValue& value,
 	{
 		f |= CONV_POSITIVE_OVERFLOW;
 	}
-	else if (std::modf(val,&intVal) != 0)
+	else if (std::fabs(std::modf(val,&intVal)) > std::numeric_limits<double>::epsilon())
 	{
 		f |= CONV_PRECISION_LOSS;
 	}
