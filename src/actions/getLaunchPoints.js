@@ -1,5 +1,5 @@
 import service from '../service';
-import { ADD_LAUNCH_POINT, GET_LAUNCH_POINTS, REMOVE_LAUNCH_POINT } from './actionNames';
+import { ADD_LAUNCH_POINT, GET_LAUNCH_POINTS, REMOVE_LAUNCH_POINT, UPDATE_LAUNCH_POINT } from './actionNames';
 const DEFAULT_APPS_IDS = ['com.webos.app.videocall', 'com.webos.app.enactbrowser', 'com.palm.app.settings']
 let timer;
 const getLaunchPoints = () => (dispatch) => {
@@ -33,6 +33,11 @@ const getLaunchPoints = () => (dispatch) => {
                 dispatch({
                     type: REMOVE_LAUNCH_POINT,
                     payload: res.launchPoint.id
+                })
+            } else if (res.launchPoint && res.change === "updated") {
+                dispatch({
+                    type: UPDATE_LAUNCH_POINT,
+                    payload: res.launchPoint
                 })
             }
 

@@ -1,4 +1,4 @@
-import { ADD_LAUNCH_POINT, GET_LAUNCH_POINTS, REMOVE_LAUNCH_POINT, SWAP_LAUNCH_POINT } from "../actions/actionNames";
+import { ADD_LAUNCH_POINT, GET_LAUNCH_POINTS, REMOVE_LAUNCH_POINT, SWAP_LAUNCH_POINT, UPDATE_LAUNCH_POINT } from "../actions/actionNames";
 
 const getApplist = (state = [], action) => {
 	switch (action.type) {
@@ -12,6 +12,10 @@ const getApplist = (state = [], action) => {
 			const element = newAray.splice(oldIndex, 1)
 			newAray.splice(newIndex, 0, ...element);
 			return newAray;
+		}
+		case UPDATE_LAUNCH_POINT: {
+			const newArray = state.filter((v) => v.id !== action.payload.id);
+			return [...newArray, action.payload]
 		}
 
 		case REMOVE_LAUNCH_POINT:
