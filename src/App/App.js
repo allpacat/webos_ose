@@ -44,11 +44,6 @@ const App = () => {
 		}
 
 	}, [dispatch, shownLaunchPad]);
-	const closeApp = useCallback(() => {
-		if (typeof window !== 'undefined') {
-			window.close();
-		}
-	}, []);
 	const showApp = useCallback(({ keyCode }) => {
 		// setShown(true);
 		if (keyCode === 48) { // 0
@@ -116,7 +111,6 @@ const App = () => {
 			</Transition>
 			<Transition css={css}
 				// onShow={handleShow}
-				onHide={closeApp}
 				direction="down"
 				visible={shown}
 				className={css.launcherTransition} >
