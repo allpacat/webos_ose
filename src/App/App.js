@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import ThemeDecorator from '@enact/sandstone/ThemeDecorator';
 import Transition from '@enact/ui/Transition';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Footer from '../views/Footer/Footer';
 import css from './App.module.less';
 import { useDispatch } from 'react-redux';
@@ -14,11 +14,15 @@ import LaunchPad from '../views/LaunchPad/LaunchPad';
 import backgroundImage from './../../assets/app_bg.jpg'
 import launchpadImage from './../../assets/launchpad_bg.jpg'
 
+const TRANSITION_DURATION = 500; // default duration of Transition component is 500ms ('medium')
+const ADDITIONAL_TIME = 50; // Transition may need more time (than TRANSITION_DURATION) to finish
+
 const App = () => {
 	const [shownLaunchPad, setShownLaunchPad] = useState(false);
 	const [curreentLanguage, setCurreentLanguage] = useState("");
 	const dispatch = useDispatch();
 	const shown = useSelector(state => state.appState);
+	const startHidingTime = useRef(Date.now());
 	const launchPadHandler = useCallback(() => {
 		if (typeof window !== 'undefined') {
 			if (!shownLaunchPad) {
@@ -33,6 +37,8 @@ const App = () => {
 	useEffect(() => {
 		if (!shown) {
 			setShownLaunchPad(false);
+		} else {
+			document.body.className = css.app_bg;
 		}
 	}, [shown])
 	const handleHide = useCallback(() => {
@@ -44,6 +50,15 @@ const App = () => {
 		}
 
 	}, [dispatch, shownLaunchPad]);
+	const closeApp = useCallback(() => {
+        if (
+            typeof window !== "undefined" &&
+			// Do not call window.close() when the Home app is being re-launched (for WRR-5621)
+            Date.now() - startHidingTime.current < TRANSITION_DURATION + ADDITIONAL_TIME
+        ) {
+            window.close();
+        }
+    }, [shown]);
 	const showApp = useCallback(({ keyCode }) => {
 		// setShown(true);
 		if (keyCode === 48) { // 0
@@ -56,7 +71,6 @@ const App = () => {
 
 	}, [dispatch])
 	const appRelaunch = useCallback(() => {
-		document.body.className = css.app_bg;
 		dispatch({
 			type: SHOW_APP,
 			payload: true
@@ -90,6 +104,9 @@ const App = () => {
 		});
 
 	}, [showApp, appRelaunch, dispatch])
+	if (!shown) {
+		startHidingTime.current = Date.now();
+	}
 	return (
 		<div className={css.app}>
 			<Transition type="fade" visible={shown}>
@@ -111,8 +128,10 @@ const App = () => {
 			</Transition>
 			<Transition css={css}
 				// onShow={handleShow}
+				onHide={closeApp}
 				direction="down"
 				visible={shown}
+				duration={TRANSITION_DURATION}
 				className={css.launcherTransition} >
 				<Footer onLaunchPadHandler={launchPadHandler} />
 			</Transition>
