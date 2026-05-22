@@ -1,0 +1,20 @@
+{
+    "name": "com.webos.service.contextintentmgr",
+    "version": "0.0.1",
+    "description": "Node-red based context intent manager (CIM) service to handle rules and corresponding actions",
+    "main": "index.js",
+    "keywords": [
+        "CIM",
+        "node-red",
+        "node-red CIM"
+    ],
+    "jshintConfig": {
+        "esversion": 6
+    },
+    "author": "LG Electronics",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "fs-extra": "^7.0.0",
+        "pubsub-js": "^1.7.0"
+    }
+}

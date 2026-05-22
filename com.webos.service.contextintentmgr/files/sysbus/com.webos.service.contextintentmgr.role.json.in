@@ -1,0 +1,12 @@
+{
+    "appId": "com.webos.service.contextintentmgr",
+    "allowedNames": ["com.webos.service.contextintentmgr"],
+    "type": "regular",
+    "trustLevel": "oem",
+    "permissions": [
+        {
+            "outbound": ["*"],
+            "service": "com.webos.service.contextintentmgr"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "contextintent.operation": [
+        "com.webos.service.contextintentmgr/injectDataToWorkflow",
+        "com.webos.service.contextintentmgr/getDataFromWorkflow"
+    ]
+}

@@ -1,0 +1,3 @@
+{
+    "com.webos.service.contextintentmgr": ["applicationinstall.management", "ai.voice", "application.devmode", "ai.management", "notification.operation", "application.operation", "application.launcher"]
+}
