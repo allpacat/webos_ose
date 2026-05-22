@@ -1,0 +1,9 @@
+{
+    "com.webos.service.flowmanager": [
+        "application.operation",
+        "application.launcher",
+        "networkconnection.query",
+        "tts.operation",
+        "tts.managment"
+    ]
+}
