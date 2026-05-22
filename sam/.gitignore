@@ -1,0 +1,10 @@
+BUILD*
+build
+.vscode
+code.sh
+*.kdev4
+build-sam.stamp
+resources
+screenlog*
+*ipk
+sa8155*
