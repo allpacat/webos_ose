@@ -1,0 +1,27 @@
+{
+   "id": "com.palm.app.settings",
+   "version": "1.1.0",
+   "vendor": "LG",
+   "type": "web",
+   "main": "index.html",
+   "title": "Settings",
+   "sysAssetsBasePath": "assets",
+   "icon": "icon.png",
+   "miniicon": "icon-mini.png",
+   "largeIcon": "icon-large.png",
+   "uiRevision": 2,
+   "transparent": true,
+   "defaultWindowType": "overlay",
+   "visible": false,
+   "lockable": false,
+   "noSplashOnLaunch": true,
+   "disableBackHistoryAPI": true,
+   "supportQuickStart": false,
+   "requiredPermissions": ["application.launcher","networkconnection.management","networkconnection.query","settings.management",
+      "settings.query","systemsettings.management","systemsettings.query","time.management","time.query",
+      "wifi.management","wifi.query"],
+   "trustLevel": "trusted",
+   "accessibility": {
+      "supportsAudioGuidance": true
+   }
+}
