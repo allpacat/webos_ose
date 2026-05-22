@@ -1,0 +1,42 @@
+.zoomSlide {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .photoPreview {
+    border: 1px solid #fff;
+    width: 10rem;
+    height: 8rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 8rem;
+    display: flex;
+    .photo {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .magnifier {
+      width: 90%;
+      height: 90%;
+      border: 2px solid #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .zoomSlider {
+    position: absolute;
+    bottom: 1rem;
+    right: 4rem;
+    height: 8rem;
+    padding: 0.5rem;
+  }
+}
+
+.slider {
+  &.vertical {
+    height: 8rem;
+  }
+}
