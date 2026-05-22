@@ -1,0 +1,21 @@
+{
+    "com.webos.app.enactbrowser-*": [
+        "application.operation",
+        "application.launcher",
+        "intent.operation",
+        "media.operation",
+        "account.query",
+        "settings.query",
+        "mediapipeline.resourcemanagement",
+        "mediapipeline.operation",
+        "mediacontroller.operation",
+        "mediacontroller.query",
+        "mediacontroller.management"
+    ],
+    "com.webos.chromium.memory.*": [
+        "memorymanager.query"
+    ],
+    "com.webos.rm.client.*": [
+        "media.operation"
+    ]
+}

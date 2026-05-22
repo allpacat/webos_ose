@@ -1,0 +1,54 @@
+{
+  "name": "com.webos.app.browser",
+  "version": "2.0.0",
+  "description": "A enact based web browser",
+  "author": "",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "enact serve",
+    "build": "./scripts/build.sh",
+    "build-p": "./scripts/build.sh -p",
+    "pack": "enact pack",
+    "pack-p": "enact pack -p",
+    "watch": "enact pack --watch",
+    "clean": "enact clean",
+    "clean-all": "./scripts/clean-all.sh",
+    "lint": "enact lint .",
+    "license": "enact license",
+    "test": "enact test start --single-run --browsers PhantomJS",
+    "test-json": "enact test start --single-run --browsers PhantomJS --reporters json",
+    "test-watch": "enact test start --browsers PhantomJS"
+  },
+  "license": "LicenseRef-EnactBrowser-Evaluation",
+  "private": true,
+  "repository": "",
+  "enact": {
+    "isomorphic": true,
+    "ri": {
+      "baseSize": 24
+    },
+    "template": "template-webos.ejs",
+    "theme": "agate"
+  },
+  "eslintConfig": {
+    "extends": "enact"
+  },
+  "dependencies": {
+    "@enact/agate": "^2.0.2",
+    "@enact/core": "^4.5.0",
+    "@enact/i18n": "^4.5.0",
+    "@enact/spotlight": "^4.5.0",
+    "@enact/ui": "^4.5.0",
+    "@enact/webos": "^4.5.0",
+    "ilib": "^14.6.0",
+    "js-browser-lib": "file:../../lib",
+    "prop-types": "^15.7.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "minimist": "^1.2.5"
+  }
+}

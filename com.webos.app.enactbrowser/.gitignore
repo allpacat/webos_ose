@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+.eslintcache
+
+# Dependency directories
+node_modules
+
+# WebPack/Babel Build
+dist
+lib

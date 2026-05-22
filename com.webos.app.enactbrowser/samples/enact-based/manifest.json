@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Enact-based Browser Sample",
+  "version": "0.1",
+  "version_name": "v0.1 [build_number_placeholder]",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    "webview",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "*://*/*.pdf*",
+    "fullscreen",
+    "audioCapture",
+    "videoCapture"
+  ],
+  "webview": {
+    "partitions": [{
+      "name": "default",
+      "accessible_resources": [
+        "pdf.js/build/*",
+        "pdf.js/web/*"
+      ]
+    }]
+  }
+}

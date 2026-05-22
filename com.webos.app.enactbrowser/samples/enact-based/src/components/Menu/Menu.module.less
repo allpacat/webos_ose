@@ -1,0 +1,38 @@
+/* Menu.module.less */
+
+@import "~@enact/agate/styles/skin.less";
+@import "~@enact/agate/styles/variables.less";
+@import "~@enact/agate/styles/mixins.less";
+
+.menuContainer {
+  min-width: 222px;
+}
+
+.Menu {
+  background-color: white;
+
+  .applySkins({
+  .icon {
+	color: black
+ }
+});
+}
+
+.applySkins({
+	.item {
+		padding: 0;
+		border-bottom-color: transparent;
+		line-height: 48px;
+
+		//New Styles
+		height: 3rem;
+
+		.focus({
+			border-bottom-color: transparent;
+		});
+	}
+
+	.contextualPopup .container{
+		background-color: white
+	}
+});

@@ -1,0 +1,26 @@
+/* History.module.less */
+@import '~@enact/agate/styles/skin.less';
+@import '~@enact/agate/styles/variables.less';
+@import "~@enact/agate/styles/variables-base.less";
+
+.history {
+	height: 75vh;
+	padding: 36px 100px 20px 100px;
+	flex: 1;
+	box-sizing: border-box;
+}
+
+.button {
+	width: 210px;
+	display: inline-block;
+}
+
+.list {
+	height: ~"calc(100vh - " 200px + @agate-button-height + 36px ~")";
+	padding: 10px;
+	margin-top: 20px;
+	&.shrinkHeight {
+		// shrink as much as bookmarkbar height (84px)
+		height: ~"calc(100vh - " 200px + @agate-button-height + 36px + 84px ~")";
+	}
+}

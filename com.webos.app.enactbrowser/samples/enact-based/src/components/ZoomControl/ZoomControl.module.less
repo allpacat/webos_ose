@@ -1,0 +1,29 @@
+/* ZoomControl.module.less */
+@import "~@enact/agate/styles/skin.less";
+
+.picker {
+  .applySkins({
+	});
+}
+
+.zoomPopupButton {
+  background-color: white;
+  .applySkins({
+		.icon {
+			color: black
+		}
+		&[disabled] {
+			background-color: darkgrey;
+		}
+	});
+}
+
+.applySkins({
+	.contextualPopup .container{
+			background-color: white
+	}
+});
+
+.enact_ui_Marquee_Marquee_marquee .enact_ui_Marquee_Marquee_text {
+  color: black;
+}
