@@ -1,0 +1,17 @@
+{
+    "exeName":"@WEBOS_INSTALL_SBINDIR@/com.webos.service.sdkagent",
+    "type": "privileged",
+    "trustLevel": "oem",
+    "allowedNames": [
+        "com.webos.service.sdkagent"
+    ],
+    "permissions": [
+        {
+            "service":"com.webos.service.sdkagent",
+            "outbound":[
+                "*"
+            ]
+        }
+    ]
+}
+

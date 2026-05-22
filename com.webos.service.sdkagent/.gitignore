@@ -1,0 +1,8 @@
+build*/
+.vscode/
+com.webos.service.sdkagent.bb
+o22/
+oe-*/
+qemux86-64/
+raspberrypi4-64/
+*msg.txt
