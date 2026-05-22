@@ -1,0 +1,13 @@
+{
+    "exeName": "@WEBOS_INSTALL_SBINDIR@/tts-service",
+    "type": "regular",
+    "trustLevel" : "oem",
+    "allowedNames": ["com.webos.service.tts"],
+    "permissions": [
+            {
+                "service":"com.webos.service.tts",
+                "outbound":["*"]
+            }
+      ]
+}
+
