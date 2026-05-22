@@ -1,0 +1,11 @@
+{
+    "com.webos.service.ai.face": [
+        "settings.query", "settings.management"
+    ],
+    "com.webos.service.ai.gesture": [
+        "settings.query", "settings.management"
+    ],
+    "com.webos.service.ai.voice": [
+        "settings.query", "settings.management"
+    ]
+}

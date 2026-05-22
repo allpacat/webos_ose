@@ -1,0 +1,24 @@
+{
+    "exeName":"@WEBOS_INSTALL_SBINDIR@/aiservice",
+    "type": "privileged",
+    "trustLevel": "oem",
+    "allowedNames": [
+        "com.webos.service.ai.face",
+        "com.webos.service.ai.gesture",
+        "com.webos.service.ai.voice"
+    ],
+    "permissions": [
+        {
+            "service":"com.webos.service.ai.face",
+            "outbound":["*"]
+        },
+        {
+            "service":"com.webos.service.ai.gesture",
+            "outbound":["*"]
+        },
+        {
+            "service":"com.webos.service.ai.voice",
+            "outbound":["*"]
+        }
+    ]
+}
