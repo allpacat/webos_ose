@@ -1,0 +1,10 @@
+{
+  "id": "com.sample.record.test",
+  "version": "0.0.1",
+  "vendor": "My Company",
+  "type": "native",
+  "main": "record_test",
+  "title": "Record Test",
+  "icon": "icon.png",
+  "requiredPermissions" : ["all"]
+}
