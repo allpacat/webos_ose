@@ -1,0 +1,21 @@
+{
+       "notification.operation": [
+        "com.webos.notification/createAlert",
+        "com.webos.notification/createToast"
+    ],
+    "notification.management": [
+        "com.webos.notification/getAlertNotification",
+        "com.webos.notification/getToastNotification",
+        "com.webos.notification/closeAlert",
+        "com.webos.notification/closeAllAlerts",
+        "com.webos.notification/closeToast",
+        "com.webos.notification/removeAllNotification",
+        "com.webos.notification/removeNotification",
+        "com.webos.notification/enable",
+        "com.webos.notification/disable",
+        "com.webos.notification/getToastCount",
+        "com.webos.notification/getToastList",
+        "com.webos.notification/setToastStatus"
+    ]
+
+}
