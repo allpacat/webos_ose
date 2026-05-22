@@ -1,0 +1,29 @@
+{
+    "com.webos.surfacemanager*": [
+        "account.query",
+        "application.launcher",
+        "application.operation",
+        "application.privilegedquery",
+        "audio.operation",
+        "audio.query",
+        "boot.query",
+        "database.operation",
+        "notification.management",
+        "notification.operation",
+        "settings.query",
+        "systemconfig.query"
+    ],
+    "com.webos.platformstarfish": [
+        "application.operation",
+        "application.privilegedquery",
+        "application.restricted",
+        "avmutemanager.management",
+        "boot.query",
+        "notification.management",
+        "settings.query",
+        "settings.operation",
+        "systemconfig.query",
+        "videooutput.management",
+        "videooutput.operation"
+    ]
+}

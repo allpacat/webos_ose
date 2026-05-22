@@ -1,0 +1,4 @@
+Open Source Software Package:
+- name: webOSOSE-luna-surfacemanager
+  source: https://github.com/webosose/luna-surfacemanager
+  license: Apache-2.0
