@@ -1,0 +1,4 @@
+Open Source Software Package:
+- name: webOSOSE-ls2-helpers
+  source: https://github.com/webosose/ls2-helpers
+  license: Apache-2.0
