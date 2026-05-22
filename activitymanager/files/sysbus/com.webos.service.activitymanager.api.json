@@ -1,0 +1,19 @@
+{
+"activity.query": [
+    "com.webos.service.activitymanager/getActivityInfo",
+    "com.webos.service.activitymanager/getManagerInfo"
+    ],
+"activity.operation": [
+    "com.webos.service.activitymanager/adopt",
+    "com.webos.service.activitymanager/cancel",
+    "com.webos.service.activitymanager/complete",
+    "com.webos.service.activitymanager/create",
+    "com.webos.service.activitymanager/release",
+    "com.webos.service.activitymanager/start",
+    "com.webos.service.activitymanager/stop",
+    "com.webos.service.activitymanager/pause"
+    ],
+"activity.wakeup": [
+    "com.webos.service.activitymanager/callback/scheduledwakeup"
+    ]
+}
